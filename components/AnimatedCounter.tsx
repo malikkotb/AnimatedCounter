@@ -39,7 +39,7 @@ function Counter({ value }: Counter) {
   return (
     <div className="flex h-32 text-white text-9xl font-medium overflow-hidden">
       {/* 3 divs for the 3 digits (100, 10, 1) */}
-      <div className="relative w-20 mr-[-8px]">
+      <div className="relative w-20">
         {[...Array(10).keys()].map((i) => (
           <Number place={100} mv={animatedValue} number={i} key={i} />
         ))}
