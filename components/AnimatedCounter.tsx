@@ -38,8 +38,8 @@ function Counter({ value }: Counter) {
 
   return (
     <div className="flex h-32 text-white text-9xl font-medium overflow-hidden">
-      {/* 3 divs for the 3 digits */}
-      <div className="relative w-20">
+      {/* 3 divs for the 3 digits (100, 10, 1) */}
+      <div className="relative w-20 mr-[-8px]">
         {[...Array(10).keys()].map((i) => (
           <Number place={100} mv={animatedValue} number={i} key={i} />
         ))}
@@ -57,27 +57,6 @@ function Counter({ value }: Counter) {
     </div>
   );
 }
-
-// type Digit = {
-//   place: number,
-//   value: number
-// }
-// function Digit({ place, value }: Digit) {
-//   let valueRoundedToPlace = Math.floor(value / place);
-//     let animatedValue = useSpring(valueRoundedToPlace);
-
-//     useEffect(() => {
-//       animatedValue.set(valueRoundedToPlace);
-//     }, [animatedValue, valueRoundedToPlace]);
-
-//     return (
-//       <div style={{ height }} className="relative w-32 tabular-nums">
-//         {[...Array(10).keys()].map((i) => (
-//           <Number key={i} mv={animatedValue} number={i} />
-//         ))}
-//       </div>
-//     );
-//   }
 
 type Number = {
   place: number;
